@@ -56,10 +56,10 @@ public class mappingTest extends TestCase {
         session.beginTransaction();
         SOS sos = new SOS("twed", "http://test.url/sos/service", "CCD");
         Offering offering = new Offering("myOffering", "myProcedure");
-        session.save( sos );
+        session.merge( sos );
 
         offering.setSos(sos);
-        session.save( offering );
+        session.persist( offering );
         session.getTransaction().commit();
         session.close();
 

@@ -15,7 +15,7 @@ import java.util.Set;
 public class Offering {
 
     @Id @GeneratedValue
-    @Column(name = "OFFERING_ID", unique = true, nullable = false)
+    @Column(name = "OFFERING_ID", unique = true)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.EAGER)
